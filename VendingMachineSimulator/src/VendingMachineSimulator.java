@@ -72,7 +72,8 @@ public class VendingMachineSimulator
      */
 	public static void displayBottles(String bottles)
 	{
-		try (FileReader reader = new FileReader(bottles))
+		try (Reader reader = new InputStreamReader(
+				new FileInputStream(bottles), "UTF-16"))
 		{
 			int i;
 			while ((i = reader.read()) != -1) System.out.print((char) i);
@@ -87,7 +88,8 @@ public class VendingMachineSimulator
      */
 	public static void displayBags(String bags)
 	{
-		try (FileReader reader = new FileReader(bags))
+		try (Reader reader = new InputStreamReader(
+				new FileInputStream(bags), "UTF-16"))
 		{
 			int i;
 			while ((i = reader.read()) != -1) System.out.print((char) i);
@@ -102,7 +104,8 @@ public class VendingMachineSimulator
      */
 	public static void displayPaperWrapper(String paper_wrapper) 
 	{
-		try (FileReader reader = new FileReader(paper_wrapper))
+		try (Reader reader = new InputStreamReader(
+				new FileInputStream(paper_wrapper), "UTF-16"))
 		{
 			int i;
 			while ((i = reader.read()) != -1) System.out.print((char) i);
